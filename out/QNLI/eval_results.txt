@@ -1,0 +1,4 @@
+acc = 0.917993776313381
+eval_loss = 0.29572502880372203
+global_step = None
+loss = None

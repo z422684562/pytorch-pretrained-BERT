@@ -23,9 +23,6 @@ bert_docstring = """
                 . `bert-base-multilingual-uncased`
                 . `bert-base-multilingual-cased`
                 . `bert-base-chinese`
-                . `bert-base-german-cased`
-                . `bert-large-uncased-whole-word-masking`
-                . `bert-large-cased-whole-word-masking`
             - a path or url to a pretrained model archive containing:
                 . `bert_config.json` a configuration file for the model
                 . `pytorch_model.bin` a PyTorch dump of a BertForPreTraining
@@ -84,7 +81,6 @@ def bertTokenizer(*args, **kwargs):
                  Default: ["[UNK]", "[SEP]", "[PAD]", "[CLS]", "[MASK]"]
 
     Example:
-        >>> import torch
         >>> sentence = 'Hello, World!'
         >>> tokenizer = torch.hub.load('huggingface/pytorch-pretrained-BERT', 'bertTokenizer', 'bert-base-cased', do_basic_tokenize=False)
         >>> toks = tokenizer.tokenize(sentence)
@@ -105,7 +101,6 @@ def bertModel(*args, **kwargs):
 
     Example:
         # Load the tokenizer
-        >>> import torch
         >>> tokenizer = torch.hub.load('huggingface/pytorch-pretrained-BERT', 'bertTokenizer', 'bert-base-cased', do_basic_tokenize=False)
         #  Prepare tokenized input
         >>> text = "[CLS] Who was Jim Henson ? [SEP] Jim Henson was a puppeteer [SEP]"
@@ -134,7 +129,6 @@ def bertForNextSentencePrediction(*args, **kwargs):
 
     Example:
         # Load the tokenizer
-        >>> import torch
         >>> tokenizer = torch.hub.load('huggingface/pytorch-pretrained-BERT', 'bertTokenizer', 'bert-base-cased', do_basic_tokenize=False)
         #  Prepare tokenized input
         >>> text = "[CLS] Who was Jim Henson ? [SEP] Jim Henson was a puppeteer [SEP]"
@@ -164,7 +158,6 @@ def bertForPreTraining(*args, **kwargs):
 
     Example:
         # Load the tokenizer
-        >>> import torch
         >>> tokenizer = torch.hub.load('huggingface/pytorch-pretrained-BERT', 'bertTokenizer', 'bert-base-cased', do_basic_tokenize=False)
         #  Prepare tokenized input
         >>> text = "[CLS] Who was Jim Henson ? [SEP] Jim Henson was a puppeteer [SEP]"
@@ -188,7 +181,6 @@ def bertForMaskedLM(*args, **kwargs):
 
     Example:
         # Load the tokenizer
-        >>> import torch
         >>> tokenizer = torch.hub.load('huggingface/pytorch-pretrained-BERT', 'bertTokenizer', 'bert-base-cased', do_basic_tokenize=False)
         #  Prepare tokenized input
         >>> text = "[CLS] Who was Jim Henson ? [SEP] Jim Henson was a puppeteer [SEP]"
@@ -230,7 +222,6 @@ def bertForSequenceClassification(*args, **kwargs):
 
     Example:
         # Load the tokenizer
-        >>> import torch
         >>> tokenizer = torch.hub.load('huggingface/pytorch-pretrained-BERT', 'bertTokenizer', 'bert-base-cased', do_basic_tokenize=False)
         #  Prepare tokenized input
         >>> text = "[CLS] Who was Jim Henson ? [SEP] Jim Henson was a puppeteer [SEP]"
@@ -265,7 +256,6 @@ def bertForMultipleChoice(*args, **kwargs):
 
     Example:
         # Load the tokenizer
-        >>> import torch
         >>> tokenizer = torch.hub.load('huggingface/pytorch-pretrained-BERT', 'bertTokenizer', 'bert-base-cased', do_basic_tokenize=False)
         #  Prepare tokenized input
         >>> text = "[CLS] Who was Jim Henson ? [SEP] Jim Henson was a puppeteer [SEP]"
@@ -298,7 +288,6 @@ def bertForQuestionAnswering(*args, **kwargs):
 
     Example:
         # Load the tokenizer
-        >>> import torch
         >>> tokenizer = torch.hub.load('huggingface/pytorch-pretrained-BERT', 'bertTokenizer', 'bert-base-cased', do_basic_tokenize=False)
         #  Prepare tokenized input
         >>> text = "[CLS] Who was Jim Henson ? [SEP] Jim Henson was a puppeteer [SEP]"
@@ -337,7 +326,6 @@ def bertForTokenClassification(*args, **kwargs):
 
     Example:
         # Load the tokenizer
-        >>> import torch
         >>> tokenizer = torch.hub.load('huggingface/pytorch-pretrained-BERT', 'bertTokenizer', 'bert-base-cased', do_basic_tokenize=False)
         #  Prepare tokenized input
         >>> text = "[CLS] Who was Jim Henson ? [SEP] Jim Henson was a puppeteer [SEP]"
